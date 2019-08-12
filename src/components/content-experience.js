@@ -1,11 +1,20 @@
 import React from "react";
-import "../css/header-experience.css";
+import "../css/style.css";
 import "../css/bootstrap.min.css";
 
-export class Body extends React.Component {
+class Experience extends React.Component {
   render() {
     return (
       <div>
+        <div className="pageTitle">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="text">Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="blank1" />
 
         <div class="historyList">
@@ -156,3 +165,5 @@ export class Body extends React.Component {
     );
   }
 }
+
+export default Experience;

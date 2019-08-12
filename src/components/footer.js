@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/header-experience.css";
+import "../css/style.css";
 import "../css/bootstrap.min.css";
 import alta from "../img/logo-ALTA-v2.png";
 import fb from "../img/ic_fb.png";
@@ -7,7 +7,7 @@ import twitter from "../img/ic-twitter.png";
 import instagram from "../img/ic-instagram.png";
 import linkedin from "../img/ic-linkedin.png";
 
-export class Footer extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <div>
@@ -64,3 +64,5 @@ export class Footer extends React.Component {
     );
   }
 }
+
+export default Footer;

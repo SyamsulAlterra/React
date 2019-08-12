@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./css/index.css";
-import App from "./home/home"; //page Home
-import Experience from "./experience/experience"; // page Experience
-import Contact from "./contact/contact"; // page Contact
-import About from "./about/about"; // page About
+
+import PageHome from "./pages/home";
+import PageAbout from "./pages/about";
+import PageExperience from "./pages/experience";
+import PageContact from "./pages/contact";
+
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<PageContact />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

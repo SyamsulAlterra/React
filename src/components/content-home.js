@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/header.css";
+import "../css/style.css";
 import logo from "../img/matthew-hamilton-tNCH0sKSZbA-unsplash.jpg";
 import "../css/bootstrap.min.css";
 
-export class Body extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <div class="container">
@@ -33,3 +33,5 @@ export class Body extends React.Component {
     );
   }
 }
+
+export default Home;

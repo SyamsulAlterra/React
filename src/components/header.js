@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/header-experience.css";
+import "../css/style.css";
 import logo from "../img/logo-ALTA.png";
 import "../css/bootstrap.min.css";
 
-export class Header extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <div>
@@ -38,17 +38,9 @@ export class Header extends React.Component {
             </div>
           </div>
         </div>
-
-        <div className="pageTitle">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="text">Experience</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     );
   }
 }
+
+export default Header;
