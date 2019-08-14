@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/style.css";
 import "../css/bootstrap.min.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 // import "../js/jquery-3.3.1.slim.min.js";
 // import "../js/bootstrap.min.js";
 
@@ -46,6 +46,7 @@ class MenuHeader extends React.Component {
   signup = () => {
     this.setState({ status: "false" }, () => {
       localStorage.setItem("status", "false");
+      this.props.history.push("/");
     });
   };
 
@@ -56,6 +57,7 @@ class MenuHeader extends React.Component {
   };
 
   render() {
+    // console.log(this.state.status);
     return (
       <div className="menu-header">
         {this.renderRedirect()}
@@ -112,4 +114,4 @@ class MenuHeader extends React.Component {
 //   );
 // }
 
-export default MenuHeader;
+export default withRouter(MenuHeader);

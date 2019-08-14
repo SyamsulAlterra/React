@@ -11,17 +11,19 @@ class Login extends React.Component {
     this.state = { username: "", password: "", status: "" };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({ status: localStorage.getItem("status") });
+    this.renderRedirect();
   }
 
   handleLogin = () => {
-    let url = "https://syamsul2-react.free.beeceptor.com/login";
+    let url = "https://syamsul4-react.free.beeceptor.com/login";
     this.setState({ status: "true" }, () => {
       axios.post(url).then(response => {
         localStorage.setItem("nama", response.data.nama);
         localStorage.setItem("email", response.data.email);
         localStorage.setItem("status", response.data.status);
+        this.props.history.push("/home");
       });
     });
   };
@@ -48,7 +50,7 @@ class Login extends React.Component {
     console.log(this.state.status);
     return (
       <div class="login">
-        {this.renderRedirect()}
+        {/* {this.renderRedirect()} */}
         <Header />
         {/* <form action=""> */}
         <label for="username">Username:</label> <br />
@@ -73,4 +75,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
