@@ -12,7 +12,7 @@ class Page extends React.Component {
     super(props);
     this.hostNews = "https://newsapi.org/v2/everything?";
     this.query = "q=Indonesia&";
-    this.apikey = "apikey=1bc92a837b9f46b6a433a86582beab5b";
+    this.apikey = "apikey=f36d39ed6dca46759870db4ee3c9e304";
     this.state = {
       news: [{ description: "description", title: "title" }],
       searchInput: ""
