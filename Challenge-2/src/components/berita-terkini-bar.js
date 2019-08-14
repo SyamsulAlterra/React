@@ -5,13 +5,15 @@ import "../css/bootstrap.min.css";
 class BeritaTerkiniBar extends React.Component {
   render() {
     return (
-      <table class="table-center berita-terkini-bar">
-        <tr>
-          <td class="align-left width">Berita Terkini</td>
-          <td class="align-right">
-            <a href="">lihat semua</a>
-          </td>
-        </tr>
+      <table className="table-center berita-terkini-bar">
+        <tbody>
+          <tr>
+            <td className="align-left width">Berita Terkini</td>
+            <td className="align-right">
+              <a href="">lihat semua</a>
+            </td>
+          </tr>
+        </tbody>
       </table>
     );
   }

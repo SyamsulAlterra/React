@@ -5,11 +5,13 @@ import "../css/bootstrap.min.css";
 class MasukDaftar extends React.Component {
   render() {
     return (
-      <table class="table-center">
-        <tr>
-          <td class="menu-item-list">Masuk</td>
-          <td class="menu-item-list">Daftar</td>
-        </tr>
+      <table className="table-center">
+        <tbody>
+          <tr>
+            <td className="menu-item-list">Masuk</td>
+            <td className="menu-item-list">Daftar</td>
+          </tr>
+        </tbody>
       </table>
     );
   }

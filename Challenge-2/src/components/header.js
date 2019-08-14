@@ -7,36 +7,68 @@ import MenuHeader from "./menu-header";
 import SearchHeader from "./search-header";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.state = { inputSearch: "search here" };
+    // this.onChange = this.onChange.bind(this);
+  }
+
+  onChange = input => {
+    this.props.onChange(input);
+    // this.setState({ inputSearch: keyword });
+  };
+
+  handleClick = input => {
+    this.props.onClick(input);
+  };
+
   render() {
+    // console.log(this.state.inputSearch);
     return (
-      <div class="container-fluid header-bg">
-        <div class="row">
-          <div class="col-2">
-            <table class="height100">
-              <td class="align-middle">
-                <LogoHeader />
-              </td>
+      <div className="container-fluid header-bg">
+        <div className="row">
+          <div className="col-2">
+            <table className="height100">
+              <tbody>
+                <tr>
+                  <td className="align-middle">
+                    <LogoHeader />
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
-          <div class="col-4">
-            <table class="height100">
-              <td class="align-middle">
-                <MenuHeader />
-              </td>
+          <div className="col-4">
+            <table className="height100">
+              <tbody>
+                <tr>
+                  <td className="align-middle">
+                    <MenuHeader onClick={this.handleClick} />
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
-          <div class="col-4">
-            <table class="height100">
-              <td class="align-middle">
-                <SearchHeader />
-              </td>
+          <div className="col-4">
+            <table className="height100">
+              <tbody>
+                <tr>
+                  <td className="align-middle">
+                    <SearchHeader onChange={this.onChange} />
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
-          <div class="col-2">
-            <table class="height100">
-              <td class="align-middle">
-                <MasukDaftar />
-              </td>
+          <div className="col-2">
+            <table className="height100">
+              <tbody>
+                <tr>
+                  <td className="align-middle">
+                    <MasukDaftar />
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

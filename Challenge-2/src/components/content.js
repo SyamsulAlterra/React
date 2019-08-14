@@ -7,24 +7,31 @@ import Headline from "./headline";
 
 class Content extends React.Component {
   render() {
+    // console.log(this.props.content[0]);
+    console.log(this.props.content);
+    let headlineNews = [];
     let a = [];
-    for (let i = 0; i < 5; i++) {
-      a.push(i);
+    if (this.props.content.length > 0) {
+      headlineNews = this.props.content[0];
+      a = this.props.content.slice(1, 4);
     }
-    // for (let i = 0; i < 4; i++) {
-    // }
-    // divisi.appendChild(<BeritaTerkini />);
+
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-4">
+      <div className="container">
+        <div className="row">
+          <div className="col-4">
             <BeritaTerkiniBar />
-            {a.map(i => {
-              return <BeritaTerkini ivalue={i + 1} />;
+            {a.map(content => {
+              return (
+                <BeritaTerkini
+                  content={content.content}
+                  title={content.title}
+                />
+              );
             })}
           </div>
-          <div class="col-8">
-            <Headline />
+          <div className="col-8">
+            <Headline headlineNews={headlineNews} />
           </div>
         </div>
       </div>

@@ -7,12 +7,14 @@ class LogoHeader extends React.Component {
   render() {
     return (
       <table>
-        <tr>
-          <td>
-            <img class="header-logo" src={logo} alt="" />
-          </td>
-          <td>KabarKabar</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <img className="header-logo" src={logo} alt="" />
+            </td>
+            <td>KabarKabar</td>
+          </tr>
+        </tbody>
       </table>
     );
   }
