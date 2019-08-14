@@ -14,7 +14,7 @@ function MyRoute(props) {
       <Route exact path="/hiburan" component={Page} />
       <Route exact path="/politik" component={Page} />
       <Route exact path="/ekonomi" component={Page} />
-      <Route exact path="/login" component={Login} />
+      <Route exact path="/" component={Login} />
       <Route exact path="/tes" component={Tes} />
       <Route exact path="/profil" component={Profil} />
     </Switch>

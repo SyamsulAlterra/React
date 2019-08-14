@@ -51,7 +51,7 @@ class MenuHeader extends React.Component {
 
   renderRedirect = () => {
     if (this.state.status === "false") {
-      return <Redirect to="/login" />;
+      return <Redirect to="/" />;
     }
   };
 
